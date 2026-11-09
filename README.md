@@ -28,6 +28,7 @@ with the app (`INSTALL.md`).
 
 ## Publishing (supplier only)
 
-Releases are made with `npm run release -- --yes` from the source repository. It builds and signs the bundle and
-creates the GitHub release here. Don't upload or edit files here by hand: a changed file no longer matches its
-signature, and vessels refuse it.
+Each version is built and checked first in the private source repository, where it waits as a private
+release. Only once it has been okayed is it published here, as the same files with the same signature, with
+`npm run release -- publish <version>`. Don't upload or edit files here by hand: a changed file no longer
+matches its signature, and vessels refuse it.
